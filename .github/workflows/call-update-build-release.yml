@@ -8,6 +8,7 @@ jobs:
     if: ${{ github.event.client_payload.repo == 'ab_platform_web' }}
     strategy:
       matrix:
+        fail-fast: false
         include:
           - branch: master
             webpack: update
@@ -31,6 +32,7 @@ jobs:
     if: ${{ github.event.client_payload.repo == 'plugin_ABDesigner' }}
     strategy:
       matrix:
+        fail-fast: false
         include:
           - branch: master
             webpack: update

@@ -46,7 +46,7 @@ jobs:
         env:
           SHORT_NAME: ${{ inputs.short_name }}
           VERSION: ${{ inputs.version }}
-          PRE: ${{ inputs.pre_release != '' && '-${{ inputs.pre_release }}' || '' }}
+          PRE: ${{ inputs.pre_release != '' && '-' || '' }}${{ inputs.pre_release }}
         run: echo "branch=CI/update$PRE/$SHORT_NAME-$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Checkout Service Web
