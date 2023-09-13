@@ -26,10 +26,15 @@ on:
       webpack_command:
         type: string
         required: true
+    secrets:
+      TOKEN:
+        required: true
 jobs:
   call-update-files:
     name: Update Files
     uses: ./.github/workflows/update-web-files.yml
+    secrets:
+      TOKEN: ${{ secrets.TOKEN }}
     with:
       web_ref: ${{ inputs.branch }}
       repository: ${{ inputs.webpack_repo }}

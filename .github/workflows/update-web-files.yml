@@ -25,6 +25,9 @@ on:
         description: webpack build command (npm run build:[command])
         required: true
         type: string
+    secrets:
+      TOKEN:
+        required: true
     outputs:
       branch: 
         value: ${{ jobs.update-files.outputs.branch }}
