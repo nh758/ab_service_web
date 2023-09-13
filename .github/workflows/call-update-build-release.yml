@@ -29,11 +29,12 @@ jobs:
     if: ${{ github.event.client_payload.repo == 'plugin_ABDesigner' }}
     strategy:
       matrix:
-        - branch: master
-          webpack: update
-        - branch: develop
-          webpack: update
-          pre_release: dev
+        include:
+          - branch: master
+            webpack: update
+          - branch: develop
+            webpack: update
+            pre_release: dev
     name: ${{ matrix.branch }}
     uses: ./.github/workflows/update-build-release.yml
     with: 
