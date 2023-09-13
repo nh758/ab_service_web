@@ -12,7 +12,7 @@ jobs:
           - branch: master
             webpack: update
           - branch: develop
-            webpack: update
+            webpack: dev
             pre_release: dev
     name: ${{ matrix.branch }}
     uses: ./.github/workflows/update-build-release.yml
@@ -35,7 +35,7 @@ jobs:
           - branch: master
             webpack: update
           - branch: develop
-            webpack: update
+            webpack: dev
             pre_release: dev
     name: ${{ matrix.branch }}
     uses: ./.github/workflows/update-build-release.yml
