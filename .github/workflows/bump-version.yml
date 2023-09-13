@@ -55,7 +55,7 @@ jobs:
         env:
           CURRENT: ${{ steps.current_version.outputs.version }}
         run: |
-          [[ $CURRENT =~ ^(.+)\+(.*)$ ]]
+          [[ $CURRENT =~ ^([^\+]+)\+?(.*)$ ]]
           echo "meta=${BASH_REMATCH[2]}" >> $GITHUB_OUTPUT
       
       - name: Increment the Version
