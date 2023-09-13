@@ -25,6 +25,9 @@ on:
         description: webpack build command (npm run build:[command])
         required: true
         type: string
+      pre_release:
+        type: string
+        required: false
     secrets:
       TOKEN:
         required: true
@@ -43,7 +46,8 @@ jobs:
         env:
           SHORT_NAME: ${{ inputs.short_name }}
           VERSION: ${{ inputs.version }}
-        run: echo "branch=CI/update/$SUB-$VERSION" >> "$GITHUB_OUTPUT"
+          PRE: ${{ inputs.pre_release != '' && '-${{ inputs.pre_release }}' || '' }}
+        run: echo "branch=CI/update$PRE/$SHORT_NAME-$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Checkout Service Web
         uses: actions/checkout@v3

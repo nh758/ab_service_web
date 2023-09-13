@@ -42,6 +42,7 @@ jobs:
       path:  ${{ inputs.webpack_path }}
       version: ${{ inputs.version }}
       webpack:  ${{ inputs.webpack_command }}
+      pre_release: ${{ inputs.pre_release }}
 
   call-run-cy-test:
     name: Test
