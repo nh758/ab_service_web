@@ -7,8 +7,8 @@ jobs:
   call-update-platform_web:
     if: ${{ github.event.client_payload.repo == 'ab_platform_web' }}
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         include:
           - branch: master
             webpack: update
@@ -31,8 +31,8 @@ jobs:
   call-update-designer:
     if: ${{ github.event.client_payload.repo == 'plugin_ABDesigner' }}
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         include:
           - branch: master
             webpack: update
