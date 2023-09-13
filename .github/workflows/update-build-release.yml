@@ -71,6 +71,7 @@ jobs:
       branch: ${{ needs.call-update-files.outputs.branch }}
       tag: v${{ needs.call-bump-version.outputs.new_version }}
       body: "- platform web updated to v${{ inputs.version }}"
+      base: ${{ inputs.branch }}
 
   call-dispatch-runtime-update:
     name: Dispatch
