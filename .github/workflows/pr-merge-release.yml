@@ -15,7 +15,7 @@ jobs:
     name: Test
     needs: [call-get-label]
     if: ${{needs.call-get-label.outputs.valid == 'true' }}
-    uses: digi-serve/.github/.github/workflows/cypress-e2e-tests.yml@master
+    uses: digi-serve/.github/.github/workflows/cypress-e2e-tests.yml@nh/skip-test
   call-bump-version:
     name: Version
     # Only run if tests pass 
