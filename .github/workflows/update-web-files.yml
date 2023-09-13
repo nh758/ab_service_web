@@ -58,7 +58,7 @@ jobs:
       - run: npm i
         working-directory: ./${{ inputs.path }}
 
-      - run: npm run build:${{ inputs/webpack }}
+      - run: npm run build:${{ inputs.webpack }}
         working-directory: ./${{ inputs.path }}
 
       - name: Commit Change to New Branch
