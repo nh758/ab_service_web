@@ -1,0 +1,84 @@
+/*!
+
+JSZip - A Javascript class for generating and reading zip files
+<http://stuartk.com/jszip>
+
+(c) 2009-2014 Stuart Knightley <stuart [at] stuartk.com>
+Dual licenced under the MIT license or GPLv3. See https://raw.github.com/Stuk/jszip/master/LICENSE.markdown.
+
+JSZip uses the library pako released under the MIT license :
+https://github.com/nodeca/pako/blob/master/LICENSE
+*/
+
+/*! attaching onStoreUpdated event
+     **/
+
+/*! checks document selection
+     **/
+
+/*! constructor
+     **/
+
+/*! counts how many occurances substring in string **/
+
+/*! create textarea or returns existing
+     **/
+
+/*! gets hash of html-element attributes
+     **/
+
+/*! gets header from first table row
+     **/
+
+/*! gets list of referencies in formula
+     **/
+
+/*! if it's defined escape function - call it
+     *	@param value
+     *		value to escape
+     *	@return
+     *		escaped value
+     **/
+
+/*! process ctrl+V pressing
+     **/
+
+/*! process updates list to POST and GET params according dataprocessor protocol
+     *	@param updates
+     *		list of objects { id: "item id", data: "data hash", operation: "type of operation"}
+     *	@return
+     *		object { post: { hash of post params as name: value }, get: { hash of get params as name: value } }
+     **/
+
+/*! select text in textarea
+     **/
+
+/*! send dataprocessor query to server
+     *	and attach event to process result
+     *	@param url
+     *		server url
+     *	@param get
+     *		hash of get params
+     *	@param post
+     *		hash of post params
+     *	@mode
+     *		'post' or 'get'
+     **/
+
+/*! set text into buffer
+     **/
+
+/*! suggestions navigation: up/down buttons move selection
+     *	@param e
+     *		event object
+     **/
+
+/**
+ * @license
+ * Webix UI v.10.1.0
+ * This software is covered by Webix Commercial License.
+ * Usage without proper license is prohibited.
+ * (c) XB Software Ltd.
+ */
+
+//!!!Set the same in skin.less!!!
