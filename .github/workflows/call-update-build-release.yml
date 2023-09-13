@@ -1,5 +1,5 @@
 name: "Update Platform Web"
-run-name: Update Platform Web to ${{ github.event.client_payload.version }}
+run-name: Update ${{ github.event.client_payload.repo }} to ${{ github.event.client_payload.version }}
 on:
   repository_dispatch:
     type: [platform_web_new_version]
