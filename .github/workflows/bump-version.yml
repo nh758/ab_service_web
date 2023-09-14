@@ -66,8 +66,8 @@ jobs:
           EXISTING_META: ${{ steps.current_meta.outputs.meta }}
         with:
           script: |
-            const nm = process.env("NEW_META");
-            const em = process.env("EXISTING_META");
+            const nm = process.env["NEW_META"];
+            const em = process.env["EXISTING_META"];
             const identifiers = ["d", "p", "c"];
             function resovleWebBuildMeta(newMeta = "", existing = "") {
               const resolvedMeta = identifiers.map(id => {
