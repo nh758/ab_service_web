@@ -12,9 +12,9 @@ jobs:
         include:
           - branch: master
             webpack: update
-          - branch: develop
-            webpack: dev
-            pre_release: dev
+          # - branch: develop
+          #   webpack: dev
+          #   pre_release: dev
     name: Update Service Web ${{ matrix.branch }} (Platform)
     uses: ./.github/workflows/update-build-release.yml
     secrets:
