@@ -17,6 +17,10 @@ on:
       pre_release:
         type: string
         required: false
+      build_meta_prefix:
+        type: string
+        required: false
+        default: p
     outputs:
       new_version:
         value: ${{ jobs.bump.outputs.new_version }}
@@ -27,7 +31,7 @@ jobs:
     uses: digi-serve/.github/.github/workflows/generate-build-meta.yml@master
     with: 
       version: ${{ inputs.platform_ver }}
-      identifier: p
+      identifier: ${{ inputs.build_meta_prefix }}
   bump:
     name: Bump Version
     runs-on: ubuntu-latest
