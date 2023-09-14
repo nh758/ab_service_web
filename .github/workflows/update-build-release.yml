@@ -36,7 +36,7 @@ jobs:
     outputs:
       branch: master
     steps:
-      - echo: hi
+      - run: echo hi
     # uses: ./.github/workflows/update-web-files.yml
     # secrets:
     #   TOKEN: ${{ secrets.TOKEN }}
